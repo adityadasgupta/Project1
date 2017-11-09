@@ -58,5 +58,5 @@ while not game_over:
     check_win(x,y)
     maze[y][x] = w
     sense.set_pixels(sum(maze,[]))
-    sleep(0.01)
+    sleep(0.1)
     maze[y][x] = b
