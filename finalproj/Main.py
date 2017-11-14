@@ -54,7 +54,7 @@ def update() :
     update_list = [temp,pressure,hum]
     return update_list
 def write2file() :
-    with open('proj.csv', 'w','a') as csvfile :
+    with open('proj.csv', 'a') as csvfile :
         writer = csv.writer(csvfile,quoting = csv.QUOTE_ALL)
         new_list = update()
         writer = writerow(new_list)
