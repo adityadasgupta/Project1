@@ -5,6 +5,7 @@ sense = SenseHat()
 
 black = (0,0,0)
 
+
 def weather():
     threading.Timer(1800.0, weather).start()
 
@@ -13,7 +14,8 @@ def weather():
     a = sense.get_pressure()
 
     y = (x * 1.8) + 32
-
+    update()
+    write2file()
     if y<0:
         y = 0
     elif y > 255:
@@ -31,7 +33,7 @@ def weather():
 
     if y < 0.0:
         sense.show_message('Stay Inside!', text_colour=(0,0,255), back_colour=black, scroll_speed=0.05)
-    elif y < 40.0:    
+    elif y < 40.0:
         sense.show_message('Winter Clothes Recommended!', text_colour=colour, back_colour=black, scroll_speed=0.05)
     elif y < 60.0:
         sense.show_message('Jacket is Recomended!', text_colour=colour, back_colour=black, scroll_speed=0.05)
@@ -41,4 +43,16 @@ def weather():
         y > 100.0
         sense.show_message('Stay Inside!', text_colour=colour, back_colour=black, scroll_speed=0.05)
 
-weather()
+#weather()
+def update() :
+    sense = sensehat()
+    temp = sense.get_temperature()
+    pressure = sense.get_pressure()
+    hum = sense.get_humidity()
+    update_list = [temp,pressure,hum]
+    return update_list
+def write2file() :
+    with open('proj.csv', 'wb') as csvfile :
+        writer = csv.writer(csvfile,quoting = csv.QUOTE_ALL)
+        new_list = update()
+        writer = writerow(new_list)
