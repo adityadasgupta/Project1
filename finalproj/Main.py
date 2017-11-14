@@ -14,7 +14,7 @@ def weather():
 
     y = (x * 1.8) + 32
 
-    if y<0:
+    if y < 0:
         y = 0
     elif y > 255:
         y = 255
