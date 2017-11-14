@@ -44,7 +44,7 @@ def weather():
         y > 100.0
         sense.show_message('Stay Inside!', text_colour=colour, back_colour=black, scroll_speed=0.05)
 
-#weather()
+weather()
 def update() :
     sense = sensehat()
     temp = sense.get_temperature()
