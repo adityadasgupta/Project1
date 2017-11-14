@@ -14,9 +14,14 @@ def weather():
     a = sense.get_pressure()
 
     y = (x * 1.8) + 32
+<<<<<<< HEAD
     update()
     write2file()
     if y<0:
+=======
+
+    if y < 0:
+>>>>>>> 7f8dcb9b2ddd832529b4a1f60a31dab5883a9dc5
         y = 0
     elif y > 255:
         y = 255
