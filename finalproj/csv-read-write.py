@@ -1,10 +1,10 @@
 import sense_hat from SenseHat
 import csv
 import time
-with open('proj.csv', 'rb') as csvfile:
+"""with open('proj.csv', 'rb') as csvfile:
     reader = csv.reader(csvfile, delimiter=',', quotechar='|')
     for row in reader:
-        print row
+        print row"""
 def update() :
     sense = sensehat()
     temp = sense.get_temperature()
@@ -17,5 +17,3 @@ def write2file() :
         writer = csv.writer(csvfile,quoting = csv.QUOTE_ALL)
         new_list = update()
         writer = writerow(new_list)
-    
-    
