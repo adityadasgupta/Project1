@@ -36,7 +36,7 @@ def weather():
 
     if y < 0.0:
         sense.show_message('Stay Inside!', text_colour=(0,0,255), back_colour=black, scroll_speed=0.05)
-    elif y < 40.0:    
+    elif y < 40.0:
         sense.show_message('Winter Clothes Recommended!', text_colour=colour, back_colour=black, scroll_speed=0.05)
     elif y < 60.0:
         sense.show_message('Jacket is Recomended!', text_colour=colour, back_colour=black, scroll_speed=0.05)
@@ -54,7 +54,7 @@ def update() :
     update_list = [temp,pressure,hum]
     return update_list
 def write2file() :
-    with open('proj.csv', 'wb') as csvfile :
+    with open('proj.csv', 'w','a') as csvfile :
         writer = csv.writer(csvfile,quoting = csv.QUOTE_ALL)
         new_list = update()
         writer = writerow(new_list)
