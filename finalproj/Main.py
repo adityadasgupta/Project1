@@ -28,60 +28,6 @@ def weather():
         y >= 60.0
         colour = (255,150 - int(y),150 - int(y))
 
-from sense_hat import SenseHat
-import threading
-
-sense = SenseHat()
-
-black = (0,0,0)
-
-def weather():
-    threading.Timer(1800.0, weather).start()
-
-    x = sense.temp
-    z = sense.get_humidity
-    a = sense.get_pressure()
-
-    y = (x * 1.8) + 32
-
-    if y<0:
-        y = 0
-    elif y > 255:
-        y = 255
-
-    if y < 60.0:
-        colour = (int(y),int(y),255)
-    else:
-        y >= 60.0
-        colour = (255,150 - int(y),150 - int(y))
-
-from sense_hat import SenseHat
-import threading
-
-sense = SenseHat()
-
-black = (0,0,0)
-
-def weather():
-    threading.Timer(1800.0, weather).start()
-
-    x = sense.temp
-    z = sense.get_humidity
-    a = sense.get_pressure()
-
-    y = (x * 1.8) + 32
-
-    if y<0:
-        y = 0
-    elif y > 255:
-        y = 255
-
-    if y < 60.0:
-        colour = (int(y),int(y),255)
-    else:
-        y >= 60.0
-        colour = (255,150 - int(y),150 - int(y))
-
     print("Temperature: " + "%.2f" % y)
     print("Humidity: " + "%.2f" % z)
     print("Pressure: " + "%.2f" % a)
