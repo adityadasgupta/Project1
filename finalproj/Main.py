@@ -99,41 +99,6 @@ def weather():
     else:
         y > 100.0
         sense.show_message('Stay Inside!', text_colour=colour, back_colour=black, scroll_speed=0.05)
-
-weather()
-    print("%.2f" % y)
-    string_value1 = str("%.2f" % y) + 'F'
-    sense.show_message(string_value1, text_colour=colour, back_colour=black, scroll_speed=0.05)
-
-    if y < 0.0:
-        sense.show_message('Stay Inside!', text_colour=(0,0,255), back_colour=black, scroll_speed=0.05)
-    elif y < 40.0:    
-        sense.show_message('Winter Clothes Recommended!', text_colour=colour, back_colour=black, scroll_speed=0.05)
-    elif y < 60.0:
-        sense.show_message('Jacket is Recomended!', text_colour=colour, back_colour=black, scroll_speed=0.05)
-    elif y < 100.0:
-        sense.show_message('Enjoy the Warmth!', text_colour=colour, back_colour=black, scroll_speed=0.05)
-    else:
-        y > 100.0
-        sense.show_message('Stay Inside!', text_colour=colour, back_colour=black, scroll_speed=0.05)
-
-weather()
-
-    string_value1 = str("%.2f" % y) + 'F'
-    sense.show_message(string_value1, text_colour=colour, back_colour=black, scroll_speed=0.05)
-
-    if y < 0.0:
-        sense.show_message('Stay Inside!', text_colour=(0,0,255), back_colour=black, scroll_speed=0.05)
-    elif y < 40.0:
-        sense.show_message('Winter Clothes Recommended!', text_colour=colour, back_colour=black, scroll_speed=0.05)
-    elif y < 60.0:
-        sense.show_message('Jacket is Recomended!', text_colour=colour, back_colour=black, scroll_speed=0.05)
-    elif y < 100.0:
-        sense.show_message('Enjoy the Warmth!', text_colour=colour, back_colour=black, scroll_speed=0.05)
-    else:
-        y > 100.0
-        sense.show_message('Stay Inside!', text_colour=colour, back_colour=black, scroll_speed=0.05)
-
 #weather()
 def update() :
     sense = sensehat()
