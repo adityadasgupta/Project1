@@ -113,6 +113,8 @@ while True:
 
 
 ...
+O = [40, 40, 40]  # BLACK BACKGROUND
+X = [170, 170, 170]  # CLOUD GREY
 W = [255, 255, 255]  #SNOW WHITE
 
 snow_cloud = [
