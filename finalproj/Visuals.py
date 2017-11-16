@@ -110,3 +110,62 @@ while True:
     sense.set_pixels(sun_i2)
     time.sleep(1)
 '''
+
+
+...
+W = [255, 255, 255]  #SNOW WHITE
+
+snow_cloud = [
+O, O, X, X, X, X, O, O,
+O, X, X, X, X, X, X, O,
+O, W, X, X, X, X, O, O,
+O, O, O, W, O, W, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O
+]
+
+snow_cloud_i1 = [
+O, O, O, X, X, X, X, O,
+O, O, X, X, X, X, X, X,
+O, O, O, X, X, X, X, O,
+O, W, O, O, O, O, O, O,
+O, O, W, O, W, O, W, O,
+O, O, O, W, O, W, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O
+]
+
+snow_cloud_i2 = [
+O, O, X, X, X, X, O, O,
+O, X, X, X, X, X, X, O,
+O, O, X, X, X, X, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, W, O, O, W, O, O, O,
+O, O, W, O, O, W, W, O,
+O, O, O, W, O, O, O, O
+]
+
+snow_cloud_i3 = [
+O, X, X, X, X, O, O, O,
+X, X, X, X, X, X, O, O,
+O, X, X, X, X, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, W, O, O, W, O, O, O,
+O, O, W, O, O, W, O, O
+]
+
+while True:
+    sense.set_pixels(snow_cloud)
+    time.sleep(1)
+    sense.set_pixels(snow_cloud_i1)
+    time.sleep(1)
+    sense.set_pixels(snow_cloud_i2)
+    time.sleep(1)
+    sense.set_pixels(snow_cloud_i3)
+    time.sleep(1)
+'''
