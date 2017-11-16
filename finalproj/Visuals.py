@@ -112,7 +112,7 @@ while True:
 '''
 
 
-...
+'''
 O = [40, 40, 40]  # BLACK BACKGROUND
 X = [170, 170, 170]  # CLOUD GREY
 W = [255, 255, 255]  #SNOW WHITE
@@ -169,5 +169,65 @@ while True:
     sense.set_pixels(snow_cloud_i2)
     time.sleep(1)
     sense.set_pixels(snow_cloud_i3)
+    time.sleep(1)
+'''
+
+
+'''
+O = [40, 40, 40]  # BLACK BACKGROUND
+X = [170, 170, 170]  # CLOUD GREY
+
+cloud = [
+O, O, X, X, X, X, O, O,
+O, X, X, X, X, X, X, O,
+O, O, X, X, X, X, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O
+]
+
+cloud_i1 = [
+O, O, O, X, X, X, X, O,
+O, O, X, X, X, X, X, X,
+O, O, O, X, X, X, X, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O
+]
+
+cloud_i2 = [
+O, O, X, X, X, X, O, O,
+O, X, X, X, X, X, X, O,
+O, O, X, X, X, X, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O
+]
+
+cloud_i3 = [
+O, X, X, X, X, O, O, O,
+X, X, X, X, X, X, O, O,
+O, X, X, X, X, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O,
+O, O, O, O, O, O, O, O
+]
+
+while True:
+    sense.set_pixels(cloud)
+    time.sleep(1)
+    sense.set_pixels(cloud_i1)
+    time.sleep(1)
+    sense.set_pixels(cloud_i2)
+    time.sleep(1)
+    sense.set_pixels(cloud_i3)
     time.sleep(1)
 '''
