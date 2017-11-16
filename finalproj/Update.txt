@@ -1,0 +1,7 @@
+Hi!
+
+We have successfully created methods which maintains a log periodically that stores the temperature, humidity and air pressure.
+We have a python code for the animations that we are yet to implement in the main code.
+What we yet have to create is a way to approximate the weather conditions by reading the temp, hum, and pressure values.
+
+We gotta do it ASAP.
