@@ -45,7 +45,7 @@ def weather():
     else:
         y > 100.0
         sense.show_message('Stay Inside!', text_colour=colour, back_colour=black, scroll_speed=0.05)
-#weather()
+
 def update() :
     sense = sensehat()
     temp = sense.get_temperature()
@@ -58,3 +58,4 @@ def write2file() :
         writer = csv.writer(csvfile,quoting = csv.QUOTE_ALL)
         new_list = update()
         writer = writerow(new_list)
+weather()
