@@ -1,0 +1,11 @@
+pressureRatio = (1049-a)/353
+chanceRain = (pressureRatio + (z/100))/2
+u = chanceRain
+if u<.25:
+  print("Little to no chance of rain")
+elif u<.50:
+  print("Slight chance of rain")
+elif u<.75:
+  print("Moderate chance of rain")
+elif u<1:
+  print("High chance of rain")
